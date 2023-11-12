@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Management App</title>
+  <link rel="stylesheet" href="styles.css"> <!-- You can link to an external CSS file for styling -->
+</head>
+
+<body>
+  <header>
+    <h1>Goal Management App</h1>
+  </header>
+
+  <main>
+    <section id="goal-section">
+      <h2>Create a New Goal</h2>
+      <form id="goal-form">
+        <label for="goal-title">Goal Title:</label>
+        <input type="text" id="goal-title" name="goal-title" required>
+
+        <label for="goal-description">Description:</label>
+        <textarea id="goal-description" name="goal-description" rows="4"></textarea>
+
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="due-date" name="due-date" required>
+
+        <button  type="submit">Create Goal</button>
+      </form>
+    </section>
+
+    <section id="goal-list">
+      <h2>Your Goals</h2>
+      <ul id="goals">
+        
+      </ul>
+    </section>
+  </main>
+<div class="my_essay">
+    <h2 class="start_essay">Essay</h2>
+  <p class="essay">Сначала мы начинаем с создания пустого объекта с именем "goals". Затем мы выбираем различные элементы на веб-странице и сохраняем их в переменные: `goalTitleInput` - поле ввода для заголовка цели, `goalDescriptionInput` - поле ввода для описания цели, `goalDateInput` - поле ввода для даты цели, `goalDateForm` - форма для ввода цели, `addedGoals` - контейнер для отображения списка целей. Мы добавляем прослушиватель событий к форме `goalDateForm` на событие "submit". Когда форма отправляется, выполняется определенная функция. Внутри этой функции мы предотвращаем стандартное поведение события (обновление страницы). Мы создаем пустой объект с именем `Data`. Мы заполняем объект `Data` свойствами: `goalTitle`, `goalDescription` и `goalDate`. Значения для этих свойств берутся из соответствующих полей ввода. Мы добавляем объект `Data` в список целей. Мы вызываем функцию для обновления отображаемого списка целей. Внутри функции для обновления списка целей мы создаем пустую строку с именем `goalsHtml`. Затем мы перебираем каждый элемент в списке целей. В цикле мы присваиваем текущий элемент переменной `dataObj`. Мы создаем HTML-код и добавляем его в строку `goalsHtml`, используя значения из объекта `dataObj`. Мы продолжаем добавлять HTML-код для каждой цели в списке. Мы обновляем отображаемый список целей, устанавливая строку `goalsHtml` внутри элемента `addedGoals`. Вне функции для обновления списка целей определена функция для удаления цели. Внутри функции для удаления цели мы выбираем текущий элемент, используя атрибут `data-goal-title`. Мы фильтруем список целей, исключая элементы с заголовками, соответствующими заголовку текущего элемента. Мы снова вызываем функцию для обновления списка целей, чтобы отобразить обновленный список после удаления цели.</p>
+</div>
+  
+  <footer>
+    <p>&copy; 2023 Your Goal Management App</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
