@@ -36,7 +36,7 @@ function renderGoalList() {
                 <h3>${dataObj.goalTitle}</h3>
                 <p>${dataObj.goalDescription}</p>
                 <p>Due Date: ${dataObj.goalDate}</p>
-                <button>Edit</button>
+                <button onclick='openModal()'>Edit</button>
                 <button data-goal-title ="${dataObj.goalTitle}" onclick="deleteGoal()">Delete</button>
             </li>`
     }
@@ -50,7 +50,10 @@ function deleteGoal() {
     goalList=goalList.filter(item => item.goalTitle !== currentItem.getAttribute('data-goal-title'))
     renderGoalList()
 }
-
+function openModal() {
+    let editModal = document.querySelector('.overlay')
+    editModal.classList.add('open')
+}
 
 
 
